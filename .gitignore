@@ -1,8 +1,5 @@
 node_modules
 npm-debug.log
-.git
-.gitattributes
-.gitignore
 
 
 # https://github.com/github/gitignore/blob/master/Global/Windows.gitignore
