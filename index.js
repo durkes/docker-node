@@ -4,7 +4,9 @@ const HTTP = require('http');
 const ROUTER = require('node-router')();
 
 const ROUTE = ROUTER.push;
-const PORT = 8080;
+
+const PORT = 3000;
+const HOST = '0.0.0.0';
 
 ROUTE('*', function (req, res, next) {
   var date = new Date();
@@ -14,5 +16,5 @@ ROUTE('*', function (req, res, next) {
   res.send({ts: ts});
 });
 
-const SERVER = HTTP.createServer(ROUTER).listen(PORT);
-console.log(`Running on :${PORT}`);
+const SERVER = HTTP.createServer(ROUTER).listen(PORT, HOST);
+console.log(`Running on http://${HOST}:${PORT}`);
